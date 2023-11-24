@@ -46,14 +46,17 @@ body {
 }
 
 main {
+    max-width: 96%;
+}
+
+.card {
     height: 509px;
     margin-left: 42px;
-    margin-top: 26px;
-    max-width: 90%;
+    margin-top: 46px;
     transition: 0.2s;
 }
 
-main {
+.card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,10 +64,10 @@ main {
     background-color: white;
     border-radius: 22px;
     padding: 0 104px 0 476px;
-
+    box-shadow: 0px 28px 13px -3px #0000002c;
 }
 
-main::after {
+.card::after {
     position: absolute;
     content: "";
     background-image: url("../images/illustration-box-desktop.svg");
@@ -81,7 +84,7 @@ main::after {
     animation-timing-function: ease-in-out;
 }
 
-main .image {
+.card .image {
     position: absolute;
     top: 0;
     left: 0;
@@ -92,20 +95,20 @@ main .image {
         url(../images/bg-pattern-desktop.svg) bottom -8.8rem left -36rem no-repeat;
 }
 
-main .faq {
+.card .faq {
     width: 342px;
     height: 100%;
     padding: 44px 0;
     z-index: 1000;
 }
 
-main .faq h1 {
+.card .faq h1 {
     font-size: 32px;
     margin-bottom: 22px;
     color: var(--Very-dark-desaturated-blue);
 }
 
-main .question {
+.card .question {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -113,18 +116,18 @@ main .question {
     transition: 0.2s;
 }
 
-main .question .text {
+.card .question .text {
     cursor: pointer;
     width: fit-content;
     transition: 0.1s;
     color: var(--Very-dark-grayish-blue);
 }
 
-main .question .text:hover {
+.card .question .text:hover {
     color: var(--Soft-red);
 }
 
-main .question button {
+.card .question button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,52 +142,52 @@ main .question button {
     transition: 0.2s;
 }
 
-main .question button:hover {
+.card .question button:hover {
     background-color: rgb(255, 199, 179);
 }
 
-main .question .text {
+.card .question .text {
     font-size: 14px;
     letter-spacing: 0.1px;
     transition: 0.1s;
 }
 
-main .faq>div {
+.card .faq>div {
     border-bottom: 1px solid var(--Light-grayish-blue);
 }
 
-main .faq .answer {
+.card .faq .answer {
     height: 60px;
     transition: 0.2s;
     color: var(--Dark-grayish-blue);
     max-width: 94%;
 }
 
-main .faq .closed .answer {
+.card .faq .closed .answer {
     height: 0px;
     overflow: hidden;
 }
 
-main .faq .open .text {
+.card .faq .open .text {
     font-weight: 700;
     color: var(--Very-dark-desaturated-blue);
 }
 
-main .faq .open .answer {
+.card .faq .open .answer {
     height: 53px;
     line-height: 1.5;
     letter-spacing: 0.05px;
 }
 
-main .faq button img {
+.card .faq button img {
     transition: 0.2s;
 }
 
-main .faq .open img {
+.card .faq .open img {
     transform: rotate(180deg);
 }
 
-main .faq .open .question {
+.card .faq .open .question {
     padding-bottom: 11px;
 }
 
@@ -225,24 +228,24 @@ main .faq .open .question {
 }
 
 @media (max-width:1000px) {
-    main {
+    .card {
         padding: 0 70px 0 410px;
     }
 
-    main .faq .open .answer {
+    .card .faq .open .answer {
         height: fit-content;
         margin-bottom: 10px;
     }
 }
 
 @media (max-width:860px) {
-    main {
+    .card {
         padding: 0 40px 0 386px;
     }
 }
 
 @media (max-width:772px) {
-    main {
+    .card {
         flex-direction: column;
         padding: 80px 30px 30px;
         margin: 0;
@@ -251,11 +254,11 @@ main .faq .open .question {
         margin-top: 150px;
     }
 
-    main::after {
+    .card::after {
         display: none;
     }
 
-    main .image {
+    .card .image {
         overflow: auto;
         width: 100%;
         background: url(../images/illustration-woman-online-mobile.svg) center center,
@@ -269,28 +272,28 @@ main .faq .open .question {
         text-align: center;
     }
 
-    main .faq {
+    .card .faq {
         max-width: 94%;
     }
 }
 
 @media (max-width:420px) {
-    main .image {
+    .card .image {
         background: url(../images/illustration-woman-online-mobile.svg) center center,
             url(../images/bg-pattern-mobile.svg) top 16rem center;
         background-size: 75%;
         background-repeat: no-repeat;
     }
 
-    main {
+    .card {
         padding-bottom: 0;
     }
 
-    main h1 {
+    .card h1 {
         margin-top: 0;
     }
 
-    main .faq {
+    .card .faq {
         padding: 10px 0 16px;
     }
 }
